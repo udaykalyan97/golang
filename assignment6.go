@@ -17,20 +17,22 @@ func main() {
 	spacecount := 0
 	lowercount := 0
 	uppercount := 0
+
 	runes := []rune(str)
 
 	for i := 0; i < len(runes); i++ {
 		fmt.Println(int(runes[i]))
-		if 47 < int(runes[i]) < 58 {
+
+		if 47 < int(runes[i]) && int(runes[i]) < 58 {
 			digitcount += 1
 		}
 		if int(runes[i]) == 32 {
 			spacecount += 1
 		}
-		if 64 < int(runes[i]) < 91 {
+		if 64 < int(runes[i]) && int(runes[i]) < 91 {
 			uppercount += 1
 		}
-		if 96 < int(runes[i]) < 123 {
+		if 96 < int(runes[i]) && int(runes[i]) < 123 {
 			lowercount += 1
 		}
 	}
